@@ -7,9 +7,14 @@ class MP3Importer
   end
   
   def files
+<<<<<<< HEAD
     # Dir.entries(path) to get the name of all files/directory
     # File.direcotory(name) to check if name is a directory of not (if not, name is a file)
     @files ||= Dir.entries(@path).select {|song| !File.directory?(song) && song.end_with?(".mp3")}
+=======
+    @files ||= Dir.entries(@path).select {|song| !File.directory?(song) && song.end_with?(".mp3")}
+    puts files
+>>>>>>> dc8116484df1434472429eecb623d26f76b9053b
   end
 
   def import
